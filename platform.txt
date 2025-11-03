@@ -33,7 +33,7 @@ compiler.c.elf.cmd=avr-gcc
 compiler.S.flags=-c -g -x assembler-with-cpp -flto -MMD
 compiler.cpp.cmd=avr-g++
 compiler.cpp.flags=-c -g {compiler.optimization_flags} {compiler.warning_flags} -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto
-compiler.ar.cmd=avr-gcc-ar
+compiler.ar.cmd={ltoarcmd}
 compiler.ar.flags=rcs
 compiler.objcopy.cmd=avr-objcopy
 compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
@@ -152,7 +152,6 @@ build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER=
 # ----------------------------------------
 debug.executable={build.path}/{build.project_name}.elf
 debug.toolchain=gcc
-#debug.toolchain.path={runtime.platform.path}
 debug.toolchain.path={runtime.tools.avrocd-tools.path}
 
 debug.server=openocd
