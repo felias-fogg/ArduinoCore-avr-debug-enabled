@@ -173,3 +173,6 @@ snap_jtag.protocol=snap_jtag
 snap_jtag.program.protocol=snap_jtag
 snap_jtag.program.tool=avrdude
 snap_jtag.program.extra_params=
+
+simavr.name=Simulator (simavr)
+simavr.debug.cortex-debug.custom.serverArgs.1={debug.toolchain.path}/simavr

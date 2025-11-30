@@ -7,7 +7,7 @@
 # https://felias-fogg.github.io/PyAvrOCD/
 
 name=Arduino AVR Boards (Debug enabled)
-version=0.9.1
+version=0.9.2
 
 # AVR compile variables
 # ---------------------
@@ -161,12 +161,12 @@ debug.server.openocd.script=nix
 debug.cortex-debug.custom.gdbPath={debug.toolchain.path}/avr-gdb
 debug.cortex-debug.custom.overrideGDBServerStartedRegex=Listening on port \d+ for gdb connection
 debug.cortex-debug.custom.objdumpPath={runtime.tools.avr-gcc.path}/bin/avr-objdump
-debug.cortex-debug.custom.serverArgs.0=-F
-debug.cortex-debug.custom.serverArgs.1={build.f_cpu}
+debug.cortex-debug.custom.serverArgs.0=-s
+debug.cortex-debug.custom.serverArgs.1=nop
 debug.cortex-debug.custom.serverArgs.2=-d
 debug.cortex-debug.custom.serverArgs.3={build.mcu}
-debug.cortex-debug.custom.serverArgs.4=-s
-debug.cortex-debug.custom.serverArgs.5=nop
+debug.cortex-debug.custom.serverArgs.4=-F
+debug.cortex-debug.custom.serverArgs.5={build.f_cpu}
 debug.cortex-debug.custom.serverArgs.6=-m
 debug.cortex-debug.custom.serverArgs.7=all
 debug.cortex-debug.custom.serverArgs.8=-P
