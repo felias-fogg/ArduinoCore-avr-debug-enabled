@@ -7,7 +7,7 @@
 # https://felias-fogg.github.io/PyAvrOCD/
 
 name=Arduino AVR Boards (Debug enabled)
-version=0.9.2
+version=0.9.3
 
 # AVR compile variables
 # ---------------------
