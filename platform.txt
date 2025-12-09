@@ -7,15 +7,15 @@
 # https://felias-fogg.github.io/PyAvrOCD/
 
 name=Arduino AVR Boards (Debug enabled)
-version=0.9.4
+version=0.9.5
 
 # AVR compile variables
 # ---------------------
 
 # Optimization flags for debugging
-compiler.optimization_flags=-Os
-compiler.optimization_flags.release=-Os
-compiler.optimization_flags.debug=-Og -ggdb3
+compiler.optimization_flags=-Os -DNDEBUG
+compiler.optimization_flags.release=-Os -DNDEBUG
+compiler.optimization_flags.debug=-Og -ggdb3 -DDEBUG
 
 # Warnings
 compiler.warning_flags=-w
